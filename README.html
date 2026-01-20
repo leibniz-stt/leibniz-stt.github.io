@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>README</title><link rel="stylesheet" href="Agda.css"></head><body><pre class="Agda"><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Pragma">--cubical</a> <a id="23" class="Pragma">--guardedness</a> <a id="37" class="Symbol">#-}</a>
+<a id="41" class="Keyword">module</a> <a id="48" href="README.html" class="Module">README</a> <a id="55" class="Keyword">where</a>
+
+<a id="62" class="Comment">-- This formalisation depends on the Cubical library, version of</a>
+<a id="127" class="Comment">-- 3 January 2026, commit a6cf6b57 and type checks with Agda 2.8.0.</a>
+
+<a id="196" class="Comment">-- The formalisation is structured as follows:</a>
+
+<a id="244" class="Comment">-- Basic lemmas/construction not available from the Cubical library</a>
+<a id="312" class="Comment">-- are included via the following file</a>
+<a id="351" class="Keyword">import</a> <a id="358" href="Prelude.html" class="Module">Prelude</a>
+
+<a id="367" class="Comment">-- An equivalence between fibres of pushout-products and joins of</a>
+<a id="433" class="Comment">-- fibres (Rijke 2017, Theorem 2.2) is found here</a>
+<a id="483" class="Keyword">import</a> <a id="490" href="PushoutProdFib.html" class="Module">PushoutProdFib</a>
+
+<a id="506" class="Comment">-- There are three directories:</a>
+
+<a id="539" class="Comment">-- * Categories</a>
+<a id="555" class="Comment">--     This directory contains basic constructions from (wild) category</a>
+<a id="627" class="Comment">--     theory. In particular &#39;proto&#39;-wild categories are set up in:</a>
+<a id="695" class="Keyword">import</a> <a id="702" href="Categories.ProtoWildCat.html" class="Module">Categories.ProtoWildCat</a>
+
+<a id="727" class="Comment">--     The categories 𝑴𝑨𝑷 and 𝑭𝑨𝑴 – two takes on the arrow category over</a>
+<a id="800" class="Comment">--     the universe of types – are introduced.</a>
+<a id="847" class="Keyword">import</a> <a id="854" href="Categories.Fam.html" class="Module">Categories.Fam</a>
+<a id="869" class="Keyword">import</a> <a id="876" href="Categories.Map.html" class="Module">Categories.Map</a>
+
+<a id="892" class="Comment">--     These are proved equivalent in the following file.</a>
+<a id="950" class="Keyword">import</a> <a id="957" href="Categories.FamMapEquiv.html" class="Module">Categories.FamMapEquiv</a>
+
+
+<a id="982" class="Comment">-- * LeibnizConstruction This directory contains the main result:</a>
+<a id="1048" class="Comment">--     pushout-products are left adjoint to</a>
+<a id="1092" class="Comment">--     pullback-exponentials. First, pushout-products and</a>
+<a id="1150" class="Comment">--     pullback-exponentials are defined of the 𝑭𝑨𝑴 category.</a>
+<a id="1212" class="Keyword">import</a> <a id="1219" href="LeibnizConstruction.Fam.html" class="Module">LeibnizConstruction.Fam</a>
+
+<a id="1244" class="Comment">--     Their adjointness is then proved for this definition.</a>
+<a id="1305" class="Keyword">import</a> <a id="1312" href="LeibnizConstruction.Adjunction.html" class="Module">LeibnizConstruction.Adjunction</a>
+
+<a id="1344" class="Comment">--     Finally, the main result is proved: pushout-products and</a>
+<a id="1408" class="Comment">--     pullback-exponentials are defined on 𝑴𝑨𝑷 and proved to satisfy</a>
+<a id="1478" class="Comment">--     the adjunction. This is done by transporting the results over</a>
+<a id="1547" class="Comment">--     from 𝑭𝑨𝑴.</a>
+<a id="1564" class="Keyword">import</a> <a id="1571" href="LeibnizConstruction.Map.html" class="Module">LeibnizConstruction.Map</a>
+
+<a id="1596" class="Comment">--     The directory also contains a file where the concept of</a>
+<a id="1659" class="Comment">--     orthogonal maps is defined (in terms of pushout products). Some</a>
+<a id="1730" class="Comment">--     closure properties are also proved ─ in particular, closure</a>
+<a id="1797" class="Comment">--     under retracts.</a>
+<a id="1820" class="Keyword">import</a> <a id="1827" href="LeibnizConstruction.Orthogonality.html" class="Module">LeibnizConstruction.Orthogonality</a>
+
+<a id="1862" class="Comment">-- * STT This directory contains the application of the above results</a>
+<a id="1932" class="Comment">--     in simplicial type theory. It contains one file containing, in</a>
+<a id="2002" class="Comment">--     particular, the result that horn inclusions are inner anodyne.</a>
+<a id="2072" class="Keyword">import</a> <a id="2079" href="STT.Interval.html" class="Module">STT.Interval</a>
+</pre></body></html>
