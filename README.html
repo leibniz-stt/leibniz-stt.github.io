@@ -3,57 +3,57 @@
 <a id="41" class="Keyword">module</a> <a id="48" href="README.html" class="Module">README</a> <a id="55" class="Keyword">where</a>
 
 <a id="62" class="Comment">-- This formalisation depends on the Cubical library, version of</a>
-<a id="127" class="Comment">-- 28 May 2026, commit 3f2e1f and type checks with Agda 2.8.0.</a>
+<a id="127" class="Comment">-- 12 June 2026, commit 7b9019 and type checks with Agda 2.8.0.</a>
 
-<a id="191" class="Comment">-- The formalisation is structured as follows:</a>
+<a id="192" class="Comment">-- The formalisation is structured as follows:</a>
 
-<a id="239" class="Comment">-- Basic lemmas/construction not available from the Cubical library</a>
-<a id="307" class="Comment">-- are included via the following file</a>
-<a id="346" class="Keyword">import</a> <a id="353" href="Prelude.html" class="Module">Prelude</a>
+<a id="240" class="Comment">-- Basic lemmas/construction not available from the Cubical library</a>
+<a id="308" class="Comment">-- are included via the following file</a>
+<a id="347" class="Keyword">import</a> <a id="354" href="Prelude.html" class="Module">Prelude</a>
 
-<a id="362" class="Comment">-- An equivalence between fibres of pushout-products and joins of</a>
-<a id="428" class="Comment">-- fibres (Rijke 2017, Theorem 2.2) is found here</a>
-<a id="478" class="Keyword">import</a> <a id="485" href="PushoutProdFib.html" class="Module">PushoutProdFib</a>
+<a id="363" class="Comment">-- An equivalence between fibres of pushout-products and joins of</a>
+<a id="429" class="Comment">-- fibres (Rijke 2017, Theorem 2.2) is found here</a>
+<a id="479" class="Keyword">import</a> <a id="486" href="PushoutProdFib.html" class="Module">PushoutProdFib</a>
 
-<a id="501" class="Comment">-- There are three directories:</a>
+<a id="502" class="Comment">-- There are three directories:</a>
 
-<a id="534" class="Comment">-- * Categories</a>
-<a id="550" class="Comment">--     This directory contains basic constructions from (wild) category</a>
-<a id="622" class="Comment">--     theory. In particular &#39;proto&#39;-wild categories are set up in:</a>
-<a id="690" class="Keyword">import</a> <a id="697" href="Categories.ProtoWildCat.html" class="Module">Categories.ProtoWildCat</a>
+<a id="535" class="Comment">-- * Categories</a>
+<a id="551" class="Comment">--     This directory contains basic constructions from (wild) category</a>
+<a id="623" class="Comment">--     theory. In particular, wild preorders are set up in:</a>
+<a id="683" class="Keyword">import</a> <a id="690" href="Categories.WildPreorder.html" class="Module">Categories.WildPreorder</a>
 
-<a id="722" class="Comment">--     The categories 𝑴𝑨𝑷 and 𝑭𝑨𝑴 – two takes on the arrow category over</a>
-<a id="795" class="Comment">--     the universe of types – are introduced.</a>
-<a id="842" class="Keyword">import</a> <a id="849" href="Categories.Fam.html" class="Module">Categories.Fam</a>
-<a id="864" class="Keyword">import</a> <a id="871" href="Categories.Map.html" class="Module">Categories.Map</a>
+<a id="715" class="Comment">--     The categories 𝑴𝑨𝑷 and 𝑭𝑨𝑴 – two takes on the arrow category over</a>
+<a id="788" class="Comment">--     the universe of types – are introduced.</a>
+<a id="835" class="Keyword">import</a> <a id="842" href="Categories.Fam.html" class="Module">Categories.Fam</a>
+<a id="857" class="Keyword">import</a> <a id="864" href="Categories.Map.html" class="Module">Categories.Map</a>
 
-<a id="887" class="Comment">--     These are proved equivalent in the following file.</a>
-<a id="945" class="Keyword">import</a> <a id="952" href="Categories.FamMapEquiv.html" class="Module">Categories.FamMapEquiv</a>
+<a id="880" class="Comment">--     These are proved equivalent in the following file.</a>
+<a id="938" class="Keyword">import</a> <a id="945" href="Categories.FamMapEquiv.html" class="Module">Categories.FamMapEquiv</a>
 
 
-<a id="977" class="Comment">-- * LeibnizConstruction This directory contains the main result:</a>
-<a id="1043" class="Comment">--     pushout-products are left adjoint to</a>
-<a id="1087" class="Comment">--     pullback-exponentials. First, pushout-products and</a>
-<a id="1145" class="Comment">--     pullback-exponentials are defined of the 𝑭𝑨𝑴 category.</a>
-<a id="1207" class="Keyword">import</a> <a id="1214" href="LeibnizConstruction.Fam.html" class="Module">LeibnizConstruction.Fam</a>
+<a id="970" class="Comment">-- * LeibnizConstruction This directory contains the main result:</a>
+<a id="1036" class="Comment">--     pushout-products are left adjoint to</a>
+<a id="1080" class="Comment">--     pullback-exponentials. First, pushout-products and</a>
+<a id="1138" class="Comment">--     pullback-exponentials are defined of the 𝑭𝑨𝑴 category.</a>
+<a id="1200" class="Keyword">import</a> <a id="1207" href="LeibnizConstruction.Fam.html" class="Module">LeibnizConstruction.Fam</a>
 
-<a id="1239" class="Comment">--     Their adjointness is then proved for this definition.</a>
-<a id="1300" class="Keyword">import</a> <a id="1307" href="LeibnizConstruction.Adjunction.html" class="Module">LeibnizConstruction.Adjunction</a>
+<a id="1232" class="Comment">--     Their adjointness is then proved for this definition.</a>
+<a id="1293" class="Keyword">import</a> <a id="1300" href="LeibnizConstruction.Adjunction.html" class="Module">LeibnizConstruction.Adjunction</a>
 
-<a id="1339" class="Comment">--     Finally, the main result is proved: pushout-products and</a>
-<a id="1403" class="Comment">--     pullback-exponentials are defined on 𝑴𝑨𝑷 and proved to satisfy</a>
-<a id="1473" class="Comment">--     the adjunction. This is done by transporting the results over</a>
-<a id="1542" class="Comment">--     from 𝑭𝑨𝑴.</a>
-<a id="1559" class="Keyword">import</a> <a id="1566" href="LeibnizConstruction.Map.html" class="Module">LeibnizConstruction.Map</a>
+<a id="1332" class="Comment">--     Finally, the main result is proved: pushout-products and</a>
+<a id="1396" class="Comment">--     pullback-exponentials are defined on 𝑴𝑨𝑷 and proved to satisfy</a>
+<a id="1466" class="Comment">--     the adjunction. This is done by transporting the results over</a>
+<a id="1535" class="Comment">--     from 𝑭𝑨𝑴.</a>
+<a id="1552" class="Keyword">import</a> <a id="1559" href="LeibnizConstruction.Map.html" class="Module">LeibnizConstruction.Map</a>
 
-<a id="1591" class="Comment">--     The directory also contains a file where the concept of</a>
-<a id="1654" class="Comment">--     orthogonal maps is defined (in terms of pushout products). Some</a>
-<a id="1725" class="Comment">--     closure properties are also proved ─ in particular, closure</a>
-<a id="1792" class="Comment">--     under retracts.</a>
-<a id="1815" class="Keyword">import</a> <a id="1822" href="LeibnizConstruction.Orthogonality.html" class="Module">LeibnizConstruction.Orthogonality</a>
+<a id="1584" class="Comment">--     The directory also contains a file where the concept of</a>
+<a id="1647" class="Comment">--     orthogonal maps is defined (in terms of pushout products). Some</a>
+<a id="1718" class="Comment">--     closure properties are also proved ─ in particular, closure</a>
+<a id="1785" class="Comment">--     under retracts.</a>
+<a id="1808" class="Keyword">import</a> <a id="1815" href="LeibnizConstruction.Orthogonality.html" class="Module">LeibnizConstruction.Orthogonality</a>
 
-<a id="1857" class="Comment">-- * STT This directory contains the application of the above results</a>
-<a id="1927" class="Comment">--     in simplicial type theory. It contains one file containing, in</a>
-<a id="1997" class="Comment">--     particular, the result that horn inclusions are inner anodyne.</a>
-<a id="2067" class="Keyword">import</a> <a id="2074" href="STT.Interval.html" class="Module">STT.Interval</a>
+<a id="1850" class="Comment">-- * STT This directory contains the application of the above results</a>
+<a id="1920" class="Comment">--     in simplicial type theory. It contains one file containing, in</a>
+<a id="1990" class="Comment">--     particular, the result that horn inclusions are inner anodyne.</a>
+<a id="2060" class="Keyword">import</a> <a id="2067" href="STT.Interval.html" class="Module">STT.Interval</a>
 </pre></body></html>
